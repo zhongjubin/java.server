@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.ssh.beans">
+	<class name="Agv" table="agv">
+		<id name="agvId" column="agvId">
+			<generator class="native"></generator>
+		</id>
+		<property name="msg" column="msg" type="java.lang.String" 
+			not-null="true" length="16"></property>
+		<property name="xcoord" column="xcoord" type="java.lang.Integer" length="3" />
+		<property name="ycoord" column="ycoord" type="java.lang.Integer" length="3" />
+		<property name="netid" column="netid" type="java.lang.String" 
+			not-null="true" length="16" />
+	</class>
+</hibernate-mapping>
